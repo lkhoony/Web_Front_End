@@ -1,0 +1,105 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.popup{
+  position: fixed;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* 중앙정렬 1 */
+/* .popup_layer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding-bottom: 50px;
+  width : 300px;
+  height : 150px;
+  background-color: #fff;
+  z-index: 10;
+  margin: -100px 0 0 -150px;
+} */
+/* 넓이 높이가 고정일 경우 */
+
+/* 중앙정렬 2 */
+/* .popup_layer{
+  position: absolute;
+  padding-bottom: 50px;
+  width : 300px;
+  height : 150px;
+  background-color: #fff;
+  z-index: 10;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+} */
+/* 넓이 높이가 고정일 경우 */
+/* inline, float요소, absolute, fixed로 위치가 고정된 요소의 모든 margin : 0으로 설정됨*/
+/* absolute에서 top,bottom,height 혹은 lfet,right,width가 설정되면 각각 상하, 좌우로 margin 자동 설정 */
+
+.popup_align{
+  display: inline-block;
+  vertical-align: middle;
+  width: 0px;
+  height: 100%;
+}
+/* 가상 선택자로 처리해도 됨 */
+.popup_layer{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 50px;
+  width : 300px;
+  min-height : 150px;
+  background-color: #fff;
+  z-index: 10;
+}
+/* 가변일 경우 */
+.popup_dimmed{
+  position: absolute;
+  background-color: #000;
+  opacity: 0.3;
+  top:0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.text_area{
+  padding: 50px 30px 30px;
+  text-align: center;
+}
+
+.btn{
+  float: left;
+  width: 50%;
+  height: 100%;
+  border: 0;
+  background-color: pink;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.btn.no{
+  background-color: lightblue;
+}
+/* button태그는 inline block 요소 */
+/* button태그는 box-sizing이 기본 border-box로 적용되어있음 */
+
+
+.btn_area{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom : 0;
+  height: 50px;
+  background-color: red;
+  overflow: hidden;
+}

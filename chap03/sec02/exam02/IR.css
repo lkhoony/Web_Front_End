@@ -1,0 +1,24 @@
+.wrapper{
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-image: url("http://www.placehold.it/500X500");
+}
+
+.blind{
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  clip: rect(0,0,0,0);
+  margin: -1px;
+  overflow: hidden;
+  /* overflos를 hidden으로 적용하여 텍스트가 overflow하지 않게 */
+  /*
+  rect(top, right, bottom, left)
+  - 해당 크기의 직사각형 모양대로 요소를 잘라냄 >> 마스크효과
+  - position 값이 absoulute 혹은 fixed인 요소에 사용
+  - overflow 속성이 visible일 경우, 적용 안됨
+    */
+}

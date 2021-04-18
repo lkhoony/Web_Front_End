@@ -1,0 +1,231 @@
+@charset "UTF-8";
+a{
+  text-decoration: none;
+  color : inherit;
+}
+
+header{
+  overflow: hidden;
+  background-color: pink;
+  padding: 20px;
+}
+
+.logo{
+  float: left;
+  font-size: 20px;
+  color : #fff;
+}
+
+nav{
+  float: right;
+}
+
+nav a{
+  font-size: 20px;
+  color : #fff;
+  padding: 0 5px;
+}
+
+.gnb_menu{
+  display: none;
+}
+
+footer{
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #ccc;
+  font-size: 14px;
+  color: #000;
+}
+
+section{
+  max-width: 900px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.list{
+  margin: -5px;
+  overflow: hidden;
+}
+
+.list li{
+  float: left;
+  width: 20%;
+
+}
+
+.inner{
+  display: block;
+  border: 1px solid #000;
+  margin: 5px;
+}
+
+.thumb img{
+  width: 100%;
+  height: auto;
+}
+
+.title{
+  text-align: center;
+  padding: 5px 0;
+  font-size: 14px;
+  color: #555;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*
+# 미디어쿼리란
+  - 각 미디어 매체에 따라 다른 스타일을 적용할 수 있게 만드는 것
+  - 미디어매체 : 모니터와 같은 스크린 매체, 프린트, 스크린 리더기와 같은 것들
+  - 동일한 웹 페이지를 다양한 환경의 사용자들에게 최적화된 경험을 제공할 수 있게 해줌
+
+# 미디어쿼리의 구성
+  1. 미디어 타입 : all, braille, embossed, handheld, print, projection, screen, speech, tty, tv
+      - 우리가 알아야 할 타입은 all, print, screen 정도
+  2. 미디어 특성 : width, height, device-width, device-height, orientation, aspect-ratio, device-aspect-ratio, color, color-index, monochrome, resolution, scan, grid
+      - width : 뷰포트의 너비
+      - orientation : 미디어가 세로모드인지 가로모드인지를 구분
+      - 미디어 쿼리에서는 이 구분을 width와 height 특성의 값을 비교해서 height>width면 세로모드
+      - 반대일 경우 가로모드로 해석
+      - 세로모드에서는 portrait, 가로모드에서는 landscape 키워드와 매칭
+
+ */
+
+@media screen and (max-width : 768px), screen and (max-height : 768px) and (orientation:landscape) {
+  header{
+    background-color: lightseagreen;
+  }
+
+  .logo{
+    width: 100px;
+    float: none;
+    display: block;
+    margin: 0 auto;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  nav{
+		overflow-x: auto;
+		overflow-y: hidden;
+		margin-top: 20px;
+		float: none;
+		white-space: nowrap;
+	}
+
+  nav a{
+		font-size: 25px;
+	}
+
+  .gnb_menu{
+    display: none;
+  }
+
+  footer{
+    background-color: lightcoral;
+    color : #fff;
+  }
+
+  .list{
+    margin: -4px;
+  }
+
+  .list li{
+    width: 25%;
+  }
+
+  .inner{
+    position : relative;
+    margin: 4px;
+  }
+
+  .title{
+		position: absolute;
+		left:0; right:0; bottom:0;
+		padding: 10px 0;
+		background-color: rgba(0,0,0,0.2);
+		color:#fff;
+	}
+}
+
+@media screen and (max-width : 375px) , screen and (max-height: 375px) and (orientation: landscape) {
+
+  header{
+    padding: 10px 0;
+  }
+
+  nav{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    z-index: 10;
+    display: none;
+    width: 200px;
+    background-color: lightslategray;
+  }
+
+  nav a{
+    display: block;
+    padding: 20px 10px;
+    font-size: 20px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .gnb_menu{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: block;
+    width: 40px;
+    height: 35px;
+    font-size: 1px;
+    color: transparent;
+    background: linear-gradient(#fff 50%, transparent 50%);
+    /* 50%(5px)는 하얀색, 50%(5px)는 투명색 */
+    background-size: 100% 10px;
+    /* width를 100%, height를 10px로 반복 */
+  }
+
+  .list li{
+    width: 100%;
+  }
+
+  section{
+    padding:0;
+  }
+  .inner{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border: none;
+    margin: 0;
+    border-top: 1px solid #000;
+  }
+
+  .thumb{
+    display: table-cell;
+    width: 100px;
+  }
+
+  .title{
+    display: table-cell;
+    position: relative;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    vertical-align: middle;
+    background-color: #fff;
+    color: #000;
+    text-overflow: inherit;
+    white-space: inherit;
+    text-align: left;
+    padding: 8px;
+  }
+}

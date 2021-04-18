@@ -1,0 +1,39 @@
+table, td, th{
+  border-collapse: collapse;
+}
+
+table{
+  width: 500px;
+  table-layout: fixed;
+  /* table의 열의 간격을 동일하게 */
+  /* 성능면에서 중요하기 때문에 반드시 추가해줘야 함 */
+}
+
+.col_age, .col_gender{
+  width: 90px;
+}
+
+th{
+  font-weight: normal;
+}
+
+th,td{
+  border-bottom: 1px solid #000;
+}
+
+thead th{
+  padding: 5px 0;
+  border-bottom: 2px solid #000;
+}
+
+tbody td{
+  height: 40px;
+}
+
+.th_view, .th_rate, tbody td{
+  text-align: right;
+}
+
+.th_male, .th_female{
+  background: #f8f8f8
+}

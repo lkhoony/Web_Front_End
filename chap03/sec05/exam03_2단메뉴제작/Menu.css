@@ -1,0 +1,94 @@
+*{
+  margin: 0;
+  padding : 0;
+}
+
+body{
+  font-family: '나눔고딕', NanumGothic, Dotum, '돋움', sans-serif;
+  font-size: 14px;
+  line-height:16px;
+}
+
+ul,ol{
+  list-style: none;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu{
+  width : 700px;
+  margin: 20px auto ;
+  text-align: center;
+  position: relative;
+  /* 서브메뉴 좌표설정을 위해 */
+}
+
+.menu_item{
+  display: inline-block;
+}
+
+.menu_link{
+  display: block;
+  padding : 13px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color : #444;
+  line-height: 24px;
+}
+
+.menu_item:hover .menu_link,
+.menu_item.active .menu_link{
+  color : #159506;
+}
+
+.submenu{
+  min-width: 700px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  /* top: 0; */
+  left: 0;
+  display: none;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.submenu_item{
+  display: inline-block;
+}
+
+.submenu_link {
+    display: block;
+    padding: 15px 35px;
+    font-size: 15px;
+    line-height: 20px;
+    color: #333;
+}
+
+.menu_item.active .submenu{
+  display: block;
+}
+
+/* 활성화 혹은 마우스 올려놓을 시 밑줄 위한 css >> after사용*/
+.submenu_link span{
+  position: relative;
+}
+
+.submenu_item:hover span,
+.submenu_item.active span{
+  color : green;
+  font-weight: bold;
+}
+
+.submenu_item:hover span:after,
+.submenu_item.active span:after {
+    position: absolute;
+    content: '';
+    right: 0;
+    bottom: -18px;
+    left: 0;
+    border-bottom: 2px solid green;
+}

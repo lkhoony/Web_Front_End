@@ -1,0 +1,89 @@
+body{
+  padding: 50px;
+}
+
+h1{
+  margin: 50px 0 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.check_form{
+  margin-top: 20px;
+  position: relative;
+}
+
+.check_form input{
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  opacity: 0;
+}
+.check_form label{
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width : 36px;
+  height: 21px;
+  border-radius: 10px;
+  background-color: #666;
+  color : transparent;
+  /* 색을 투명하게 */
+}
+
+.check_form label:before{
+  position: absolute;
+  content:"";
+  left:1px;
+  top:1px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.check_form input:checked + label{
+  background-color: blue;
+}
+
+.check_form input:checked + label:before{
+  left: auto;
+  /* before에 left 좌표가 설정이 되있기 때문 */
+  right: 1px;
+}
+
+.check_form2{
+  margin-top : 20px;
+  position: relative;
+}
+
+.check_form2 input{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.check_form2 label{
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.check_form2 label:before{
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url('check_box.png');
+  background-size: 16px;
+  margin-right: 10px;
+  vertical-align: top;
+}
+
+.check_form2 input:checked + label:before{
+  background-image: url('checked_box.png');
+}

@@ -1,0 +1,43 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body,html,.wrap{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  margin : 0;
+  padding: 0;
+}
+
+.wrap{
+  position: relative;
+}
+
+.header{
+  height: 100px;
+  background-color: lightblue;
+  position: fixed;
+  top : 0;
+  left: 0;
+  right: 0;
+}
+
+.container{
+  min-height: 100%;
+  padding: 100px 0;
+  box-sizing: border-box;
+  margin-bottom: -100px;
+}
+
+.content{
+  background-color: lightcoral;
+  height : 1000px;
+}
+
+.footer{
+  height : 100px;
+  background-color: cyan;
+}

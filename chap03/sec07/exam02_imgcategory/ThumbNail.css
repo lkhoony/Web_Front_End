@@ -1,0 +1,248 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+	font-size: 15px;
+	font-family: Dotum,'돋움',Helvetica,"Apple SD Gothic Neo",sans-serif;
+  line-height: 18px;
+  color: #3c3c3c;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  color : inherit;
+  text-decoration: none;
+  vertical-align: top;
+}
+
+img{
+  vertical-align: top;
+}
+
+h1{
+  width : 1000px;
+  margin: 0 auto;
+  padding : 20px 0;
+  font-size: 26px;
+  line-height: 38px;
+  color: #000;
+}
+
+.blind{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}
+
+.main_wrap{
+  background-color: #ececec;
+}
+
+/* 코드가 재선언 되는것을 방지하기 위해 부모클래스를 입력해줌 */
+.main_wrap .content{
+  position: relative;
+  width : 1000px;
+  margin: 0 auto;
+  padding: 50px 0 20px;
+}
+
+.main_wrap .noti_text{
+  position: absolute;
+  top : 10px;
+  right: 0;
+  font-size: 12px;
+  color: #7c7c7c;
+}
+
+.main_list li{
+  float: left;
+}
+
+.main_list:after{
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.main_list li + li{
+  margin-left: 17px;
+}
+
+.main_list .img_box img{
+  width: 322px;
+  height: 215px;
+}
+
+.main_list .item_link{
+  /* a태그가 li태그 안에 꽉 차기 위함 */
+  display: block;
+  position: relative;
+}
+
+.main_list .img_box {
+  position: relative;
+}
+
+.main_list .img_box:after{
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  /* width를 설정하지않고  */
+  background-color: rgba(0,0,0,0.5);
+  /* 어두운 배경을 이미지 위에 씌워주기 위함 */
+  border: 1px solid rgba(0,0,0,0.05)
+}
+
+.main_list .info_wrap{
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.main_list .info{
+  margin-left: 40px;
+}
+
+.main_list .rank{
+  position: absolute;
+  top: -5px;
+  text-align: center;
+}
+
+.main_list .rank .num{
+  display: block;
+  font-size: 40px;
+  line-height: 42px;
+}
+
+.main_list .rank .change {
+    display: block;
+    margin-top: 11px;
+}
+/* -----------------------------  */
+.main_list .rank .change:before {
+    display: inline-block;
+    content: '';
+    margin-right: 3px;
+}
+
+.rank .up:before {
+    width: 7px;
+    height: 10px;
+    background: url("http://placehold.it/7X10") no-repeat;
+}
+
+/* 가상 연산자로 같은 것을 가르킬 수 있음. */
+
+/* ------------------------------ */
+.rank .up {
+    color: #f82850;
+}
+
+.rank .down:before {
+    width: 7px;
+    height: 10px;
+    background: url("http://placehold.it/7X10") no-repeat;
+}
+.rank .down {
+    color: #1996ff;
+}
+.rank .keep:before {
+    width: 7px;
+    height: 10px;
+    background: url("http://placehold.it/7X10") no-repeat;
+}
+
+.main_list .info .category{
+  font-size: 14px;
+  line-height: 18px;
+  /* font size를 입력할 때 line height를 입력해 주는것이 좋음 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.main_list .info .title{
+  margin-top: 3px;
+  font-size: 18px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sub_list{
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.sub_list::after{
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.sub_list li{
+  float: left;
+  width: 188px;
+}
+
+.sub_list li+li{
+  margin-left: 15px;
+}
+.sub_list .info .title{
+  font-size: 14px;
+  display: block;
+  line-height: 18px;
+  max-height: 36px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient : vertical;
+  -webkit-line-clamp : 2;
+  margin-top: 10px;
+}
+
+.sub_list .info .category_link{
+  font-size: 12px;
+  line-height: 16px;
+  display:block;
+  margin-top: 3px;
+  color: rgb(81, 206, 242);
+}
+
+.main_list .like{
+  position: relative;
+  display: block;
+  margin-top: 5px;
+  padding-left: 18px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.main_list .like:after{
+  position: absolute;
+  /* absolute 설정 시 normal flow에서 벗어나게 됨 */
+  top: 3px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  content: '';
+  background: url("http://www.placehold.it/14X14");
+}

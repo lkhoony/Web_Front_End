@@ -1,0 +1,49 @@
+html,body,.wrap{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  margin : 0px;
+  padding : 0px;
+}
+
+.wrap{
+  min-width: 800px;
+}
+
+.container{
+  width: 800px;
+  min-height: 100%;
+  padding: 100px 0;
+  margin: -100px auto;
+  box-sizing: border-box;
+  display: table;
+  table-layout: fixed;
+}
+
+.header{
+  height : 100px;
+  background-color: lightgreen;
+}
+
+.article{
+  background-color: lightcoral;
+  display: table-cell;
+  border-right: 2px solid black;
+}
+
+.aside{
+  background-color: cyan;
+  width: 300px;
+  display: table-cell;
+}
+
+.footer{
+  height : 100px;
+  background-color: cornflowerblue;
+}
+
+/* 1. display : table 속성을 적용하면 table cell들은 부모 width를 cell수를 나눈만큼 할당받음
+   2. 높이값은 상속이됨
+ */

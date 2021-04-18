@@ -1,0 +1,31 @@
+
+p{
+  width: 200px;
+  background-color: yellow;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.elip1{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.elip2{
+  max-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient : vertical;
+  -webkit-line-clamp : 2;
+}
+
+.elip3{
+  max-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient : vertical;
+  -webkit-line-clamp : 3;
+}

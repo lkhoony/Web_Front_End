@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="StatisticsTable.css">
+    <title>Statistic Table</title>
+  </head>
+  <body>
+    <table>
+      <caption>성별, 연령별 분포 목록</caption>
+      <colgroup>
+        <!-- <col class="col" span="2"> 병합하여 스타일 적용해도 됨 -->
+        <col class="col_age">
+        <col class="col_gender">
+        <col span="2">
+        <!-- col 병합 -->
+
+        <!-- col에 스타일을 적용하기 위해서 사용 (각 col에 일괄 적용됨) -->
+        <!-- 단 스타일은 width, background, border만 -->
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col">연령별</th>
+          <th scope="col">성별</th>
+          <th scope="col" class="th_view">조회수</th>
+          <th scope="col" class="th_rate">비율</th>
+        </tr>
+      </thead>
+      <tr>
+        <th rowspan="2" scope="rowgroup">전체</th>
+        <th scope="row" class="th_male">남</th>
+        <td>0</td>
+        <td>0.0%</td>
+      </tr>
+      <tr>
+        <th scope="row" class="th_female">여</th>
+        <td>0</td>
+        <td>0.0%</td>
+      </tr>
+      <tr>
+        <th rowspan="2" scope="rowgroup">0-12</th>
+        <th scope="row" class="th_male">남</th>
+        <td>0</td>
+        <td>0.0%</td>
+      </tr>
+      <tr>
+        <th scope="row" class="th_female">여</th>
+        <td>0</td>
+        <td>0.0%</td>
+      </tr>
+    </table>
+  </body>
+</html>
